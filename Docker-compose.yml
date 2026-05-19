@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    deploy:
+      replicas: 1
+
+  generator:
+    image: my-generator  # Ссылка на собранный образ
+    deploy:
+      replicas: 2        # Swarm запустит 2 копии для теста
+
+  service1:
+    image: my-service1
+    deploy:
+      replicas: 1
+
+  service2:
+    image: my-service2
+    deploy:
+      replicas: 1
