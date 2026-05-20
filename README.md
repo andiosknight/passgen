@@ -12,17 +12,17 @@
 *   **nginx** — обратный прокси-сервер (Reverse Proxy) для маршрутизации внешнего трафика.
 
 ```text
-├── generator/
-│   ├── Passgen.cpp
-│   └── Dockerfile
-├── service1/
-│   ├── app.py
-│   └── Dockerfile
-├── service2/
-│   └── Dockerfile
-├── nginx/
-│   └── default.conf
-└── docker-compose.yml
+generator/
+   Passgen.cpp
+   Dockerfile
+service1/
+    app.py
+    Dockerfile
+service2/
+    Dockerfile
+nginx/
+    default.conf
+docker-compose.yml
 ```
 
 ## Варианты запуска
